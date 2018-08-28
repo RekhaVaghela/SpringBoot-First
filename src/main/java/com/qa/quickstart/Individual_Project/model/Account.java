@@ -22,7 +22,4 @@ public class Account {
 		this.firstName = firstName;
 	}
 	
-	
-	
-
 }

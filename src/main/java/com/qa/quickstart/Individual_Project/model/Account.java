@@ -8,7 +8,22 @@ public class Account {
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String firstName;
+	private String lastName;
+	private int accountNumber;
 	
+	
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public int getAccountNumber() {
+		return accountNumber;
+	}
+	public void setAccountNumber(int accountNumber) {
+		this.accountNumber = accountNumber;
+	}
 	public Long getId() {
 		return id;
 	}

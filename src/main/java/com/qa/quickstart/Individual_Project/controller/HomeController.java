@@ -9,11 +9,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.google.gson.Gson;
 import com.qa.quickstart.Individual_Project.model.Account;
 import com.qa.quickstart.Individual_Project.service.account.AccountService;
+import com.qa.quickstart.Individual_Project.service.account.RegisterAccountServiceOperation;
 
 @Controller 
 public class HomeController {
 	
-	public final AccountService accountService;
+	/*public final AccountService accountService;
 	
 	@Autowired
 	public HomeController(AccountService accountService) {
@@ -23,16 +24,23 @@ public class HomeController {
 	@RequestMapping ("/home")
 	@ResponseBody 
 	public String home() {
-		return "heellooo";
+		return "accounts";
 	}
 	
+	@RequestMapping ("/create")
+	@ResponseBody 
+	public Account createAccount(@RequestBody Account account) {
+		return RegisterAccountServiceOperation.addAccount(account);
+	}
+	
+	// TODO move and create to account controller class
 	@RequestMapping ("/register")
 	@ResponseBody 
 	public Account register(@RequestBody String account) {
 		
 		return accountService.register(new Gson().fromJson(account, Account.class));
 		
-	}
+	}*/
 	
 
 }

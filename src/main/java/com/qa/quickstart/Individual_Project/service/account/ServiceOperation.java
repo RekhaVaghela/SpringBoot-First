@@ -8,13 +8,12 @@ import org.springframework.stereotype.Component;
 import com.qa.quickstart.Individual_Project.model.Account;
 import com.qa.quickstart.Individual_Project.repository.AccountRepository;
 
-@Component 
-public class RegisterAccountServiceOperation {
-	
-	/*@Autowired
+@Component
+public class ServiceOperation {
+	@Autowired
 	private final AccountRepository accountRepository;
 	
-	public List<Account>getallAccounts(){
+	public List<Account>getAllAccounts(){
 		return accountRepository.findAll();
 	}
 	
@@ -22,19 +21,18 @@ public class RegisterAccountServiceOperation {
 		return accountRepository.save(account);
 	}
 	
-	public Account updateAccount(Account account) {
+	public Account updateAccount(Long id, Account account) {
 		return accountRepository.save(account);
 	}
 	
-	public Account deleteAccount(Account account) {
-		accountRepository.delete(account);
-		return account;
-	}
+	public Account deleteAccount(Long id, Account account) {
+	accountRepository.delete(account);
+	return account;
+}
 	
-	public RegisterAccountServiceOperation(AccountRepository accountRepository) {
+	public ServiceOperation(AccountRepository accountRepository) {
 		this.accountRepository = accountRepository;
 		
-	}*/
-	
+	}
 
 }

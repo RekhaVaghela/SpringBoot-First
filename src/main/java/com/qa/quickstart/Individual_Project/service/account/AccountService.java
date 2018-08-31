@@ -8,7 +8,7 @@ import com.qa.quickstart.Individual_Project.model.Account;
 @Service
 public class AccountService {
 	
-	private final RegisterAccountServiceOperation registerAccountServiceOperation;
+	/* private final RegisterAccountServiceOperation registerAccountServiceOperation;
 	
 	@Autowired
 	public AccountService (RegisterAccountServiceOperation registerAccountServiceOperation) {
@@ -16,10 +16,10 @@ public class AccountService {
 	
 	}
 	
-	public Account register (Account account) {
+	/*public Account register (Account account) {
 		return registerAccountServiceOperation.execute(account);
 		
 		
-	}
+	}*/
 
 }

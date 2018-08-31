@@ -1,4 +1,6 @@
+com\qa\quickstart\Individual_Project\service\account\ServiceOperation.class
 com\qa\quickstart\Individual_Project\controller\HomeController.class
+com\qa\quickstart\Individual_Project\controller\AccountController.class
 com\qa\quickstart\Individual_Project\repository\AccountRepository.class
 com\qa\quickstart\Individual_Project\service\account\AccountService.class
 com\qa\quickstart\Individual_Project\service\account\RegisterAccountServiceOperation.class

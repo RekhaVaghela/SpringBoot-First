@@ -21,7 +21,6 @@ public class AccountController {
 	@Autowired
 	private ServiceOperation serviceOperation;
 
-	@Autowired
 	public AccountController(ServiceOperation serviceOperation) {
 		this.serviceOperation = serviceOperation;
 	}
@@ -41,13 +40,14 @@ public class AccountController {
 	@PutMapping ("/update/{id}")
 	@ResponseBody
 	public Account updateAccount(@PathVariable Long id, @RequestBody Account account) {
+		
 		return serviceOperation.updateAccount(id, account);
 	}
 	
 	@DeleteMapping ("/delete/{id}")
 	@ResponseBody
-	public Account deleteAccount(@RequestBody Long id,  @RequestBody Account account) {
-		return serviceOperation.deleteAccount(id, account);
+	public Account deleteAccount(@PathVariable Long id) {
+		return serviceOperation.deleteAccount(id);
 	}
 
 	@RequestMapping ("/getAll")

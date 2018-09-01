@@ -7,5 +7,9 @@ import com.qa.quickstart.Individual_Project.model.Account;
 
 @Repository
 public interface AccountRepository extends JpaRepository<Account,Long>{
+	
+	public void deleteById(Long id);
+	public Account getById(Long id);
+
 
 }

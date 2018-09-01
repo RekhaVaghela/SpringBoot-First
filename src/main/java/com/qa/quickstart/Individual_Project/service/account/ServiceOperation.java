@@ -1,10 +1,8 @@
 package com.qa.quickstart.Individual_Project.service.account;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import com.qa.quickstart.Individual_Project.model.Account;
 import com.qa.quickstart.Individual_Project.repository.AccountRepository;
 
@@ -25,10 +23,11 @@ public class ServiceOperation {
 		return accountRepository.save(account);
 	}
 	
-	public Account deleteAccount(Long id, Account account) {
-	accountRepository.delete(account);
-	return account;
-}
+	public Account deleteAccount(Long id) {
+		Account account = accountRepository.getById(id);
+		accountRepository.deleteById(id);
+		return account;
+	}
 	
 	public ServiceOperation(AccountRepository accountRepository) {
 		this.accountRepository = accountRepository;

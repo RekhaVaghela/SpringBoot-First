@@ -20,6 +20,7 @@ public class ServiceOperation {
 	}
 	
 	public Account updateAccount(Long id, Account account) {
+		account.setId(id);
 		return accountRepository.save(account);
 	}
 	
